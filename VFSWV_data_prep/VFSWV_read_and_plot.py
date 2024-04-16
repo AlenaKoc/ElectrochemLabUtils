@@ -171,6 +171,13 @@ if __name__ == "__main__":
 
     # Checking files for Inas
     # path = r'C:\Documents\Collaborations\Undergraduate_student_projects\March_2022\Inas_Ansari\CuO_with_CoPc'
+
+  # !!!!! In order to use this script, you have to record the number of SWVs equal to number of entries in np.array and with PW values
+  # equal to step times array values. Then the data for each SWV should be extracted to .txt files containing E, V and I, mA and contained
+  # in one folder. The other files and folders could be also present.
+
+  # !!!!! Insert path to the folder with txt files between '' instead of the current one !!!!!
+  
     path = r'C:\Documents\Collaborations\Undergraduate_student_projects\March_2022\Inas_Ansari\CuO_pristine'
 
     # create arrays of step delay times (ms) and frequencies (Hz)
@@ -180,7 +187,8 @@ if __name__ == "__main__":
                         60, 65, 70, 75, 80, 85, 90, 95, 100, 125, 150, 175, 200, 300, 400, 500, 750, 1000, 1500])
     frequencies = 500/step_times
 
-    # define a window of interest across x and y axis
+    # !!!!!!!!  Insert the values for a window of interest across x (E, V) and y axis (log f = log (1/(2*PW))) !!!!!!!!
+  
     e_boundary_highest, e_boundary_lowest = 0.8, -1.0
     log_frequency_highest, log_frequency_lowest = 3.09, -0.47
 
